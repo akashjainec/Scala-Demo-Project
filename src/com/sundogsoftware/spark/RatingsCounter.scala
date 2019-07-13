@@ -26,7 +26,9 @@ object RatingsCounter {
     val ratings = lines.map(x => x.toString().split("::")(2))
     
     // Count up how many times each value (rating) occurs
-    val results = ratings.countByValue()
+    
+   // Added for testing purpose
+   val results = ratings.countByValue()
     
     // Sort the resulting map of (rating, count) tuples
     val sortedResults = results.toSeq.sortBy(_._1)
